@@ -55,8 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\player1.cs" />
-     <Compile Include="Assets\player2.cs" />
+     <Compile Include="Assets\scripts\multipletargetcamera.cs" />
+     <Compile Include="Assets\scripts\player1.cs" />
+     <Compile Include="Assets\scripts\player2.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Usuarios/enzomarin/Documents/proyectos unity/proyecto_info_265/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
