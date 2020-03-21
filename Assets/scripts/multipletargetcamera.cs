@@ -10,8 +10,9 @@ public class multipletargetcamera : MonoBehaviour
     private Vector3 velocity;
 
 // variables para controlar el zoom de la camara
-    public float maxZoom = 10f;
     public float minZoom = 40f;
+    public float maxZoom = 10f;
+    
     public float zoomLimiter = 40f;
 
 
@@ -50,7 +51,7 @@ public class multipletargetcamera : MonoBehaviour
     void  zoom(){
         
         float newzoom = Mathf.Lerp(maxZoom,minZoom, GetGreatestDistance() / zoomLimiter );
-        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newzoom, Time.deltaTime);
+        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newzoom, Time.deltaTime); 
     }
     void movement(){
         Vector3 centerPoint = GetCenterPoint();
