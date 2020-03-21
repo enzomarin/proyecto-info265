@@ -1,137 +1,383 @@
 fileFormatVersion: 2
 guid: c877cd35806652345a337adee72740fb
-timeCreated: 1481319196
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: ORC_
-    100004: ORC_ Head
-    100006: ORC_ L Calf
-    100008: ORC_ L Clavicle
-    100010: ORC_ L Finger0
-    100012: ORC_ L Finger01
-    100014: ORC_ L Finger02
-    100016: ORC_ L Finger1
-    100018: ORC_ L Finger11
-    100020: ORC_ L Finger12
-    100022: ORC_ L Finger2
-    100024: ORC_ L Finger21
-    100026: ORC_ L Finger22
-    100028: ORC_ L Finger3
-    100030: ORC_ L Finger31
-    100032: ORC_ L Finger32
-    100034: ORC_ L Foot
-    100036: ORC_ L Forearm
-    100038: ORC_ L Hand
-    100040: ORC_ L Thigh
-    100042: ORC_ L Toe0
-    100044: ORC_ L UpperArm
-    100046: ORC_ Neck
-    100048: ORC_ Pelvis
-    100050: ORC_ Queue de cheval 1
-    100052: ORC_ Queue de cheval 11
-    100054: ORC_ Queue de cheval 12
-    100056: ORC_ Queue de cheval 13
-    100058: ORC_ Queue de cheval 2
-    100060: ORC_ R Calf
-    100062: ORC_ R Clavicle
-    100064: ORC_ R Finger0
-    100066: ORC_ R Finger01
-    100068: ORC_ R Finger02
-    100070: ORC_ R Finger1
-    100072: ORC_ R Finger11
-    100074: ORC_ R Finger12
-    100076: ORC_ R Finger2
-    100078: ORC_ R Finger21
-    100080: ORC_ R Finger22
-    100082: ORC_ R Finger3
-    100084: ORC_ R Finger31
-    100086: ORC_ R Finger32
-    100088: ORC_ R Foot
-    100090: ORC_ R Forearm
-    100092: ORC_ R Hand
-    100094: ORC_ R Thigh
-    100096: ORC_ R Toe0
-    100098: ORC_ R UpperArm
-    100100: ORC_ Spine
-    100102: ORC_ Spine1
-    100104: PELT_SKIN_BACK_1
-    100106: PELT_SKIN_BACK_2
-    100108: PELT_SKIN_BACK_3
-    100110: PELT_SKIN_FRONT_1
-    100112: PELT_SKIN_FRONT_2
-    100114: PELT_SKIN_FRONT_3
-    100116: SHOULDER_PAD_L
-    100118: SHOULDER_PAD_R
-    400000: //RootNode
-    400002: ORC_
-    400004: ORC_ Head
-    400006: ORC_ L Calf
-    400008: ORC_ L Clavicle
-    400010: ORC_ L Finger0
-    400012: ORC_ L Finger01
-    400014: ORC_ L Finger02
-    400016: ORC_ L Finger1
-    400018: ORC_ L Finger11
-    400020: ORC_ L Finger12
-    400022: ORC_ L Finger2
-    400024: ORC_ L Finger21
-    400026: ORC_ L Finger22
-    400028: ORC_ L Finger3
-    400030: ORC_ L Finger31
-    400032: ORC_ L Finger32
-    400034: ORC_ L Foot
-    400036: ORC_ L Forearm
-    400038: ORC_ L Hand
-    400040: ORC_ L Thigh
-    400042: ORC_ L Toe0
-    400044: ORC_ L UpperArm
-    400046: ORC_ Neck
-    400048: ORC_ Pelvis
-    400050: ORC_ Queue de cheval 1
-    400052: ORC_ Queue de cheval 11
-    400054: ORC_ Queue de cheval 12
-    400056: ORC_ Queue de cheval 13
-    400058: ORC_ Queue de cheval 2
-    400060: ORC_ R Calf
-    400062: ORC_ R Clavicle
-    400064: ORC_ R Finger0
-    400066: ORC_ R Finger01
-    400068: ORC_ R Finger02
-    400070: ORC_ R Finger1
-    400072: ORC_ R Finger11
-    400074: ORC_ R Finger12
-    400076: ORC_ R Finger2
-    400078: ORC_ R Finger21
-    400080: ORC_ R Finger22
-    400082: ORC_ R Finger3
-    400084: ORC_ R Finger31
-    400086: ORC_ R Finger32
-    400088: ORC_ R Foot
-    400090: ORC_ R Forearm
-    400092: ORC_ R Hand
-    400094: ORC_ R Thigh
-    400096: ORC_ R Toe0
-    400098: ORC_ R UpperArm
-    400100: ORC_ Spine
-    400102: ORC_ Spine1
-    400104: PELT_SKIN_BACK_1
-    400106: PELT_SKIN_BACK_2
-    400108: PELT_SKIN_BACK_3
-    400110: PELT_SKIN_FRONT_1
-    400112: PELT_SKIN_FRONT_2
-    400114: PELT_SKIN_FRONT_3
-    400116: SHOULDER_PAD_L
-    400118: SHOULDER_PAD_R
-    7400000: attack3Forward_RM
-    9500000: //RootNode
-    11100000: //RootNode
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: ORC_
+  - first:
+      1: 100004
+    second: ORC_ Head
+  - first:
+      1: 100006
+    second: ORC_ L Calf
+  - first:
+      1: 100008
+    second: ORC_ L Clavicle
+  - first:
+      1: 100010
+    second: ORC_ L Finger0
+  - first:
+      1: 100012
+    second: ORC_ L Finger01
+  - first:
+      1: 100014
+    second: ORC_ L Finger02
+  - first:
+      1: 100016
+    second: ORC_ L Finger1
+  - first:
+      1: 100018
+    second: ORC_ L Finger11
+  - first:
+      1: 100020
+    second: ORC_ L Finger12
+  - first:
+      1: 100022
+    second: ORC_ L Finger2
+  - first:
+      1: 100024
+    second: ORC_ L Finger21
+  - first:
+      1: 100026
+    second: ORC_ L Finger22
+  - first:
+      1: 100028
+    second: ORC_ L Finger3
+  - first:
+      1: 100030
+    second: ORC_ L Finger31
+  - first:
+      1: 100032
+    second: ORC_ L Finger32
+  - first:
+      1: 100034
+    second: ORC_ L Foot
+  - first:
+      1: 100036
+    second: ORC_ L Forearm
+  - first:
+      1: 100038
+    second: ORC_ L Hand
+  - first:
+      1: 100040
+    second: ORC_ L Thigh
+  - first:
+      1: 100042
+    second: ORC_ L Toe0
+  - first:
+      1: 100044
+    second: ORC_ L UpperArm
+  - first:
+      1: 100046
+    second: ORC_ Neck
+  - first:
+      1: 100048
+    second: ORC_ Pelvis
+  - first:
+      1: 100050
+    second: ORC_ Queue de cheval 1
+  - first:
+      1: 100052
+    second: ORC_ Queue de cheval 11
+  - first:
+      1: 100054
+    second: ORC_ Queue de cheval 12
+  - first:
+      1: 100056
+    second: ORC_ Queue de cheval 13
+  - first:
+      1: 100058
+    second: ORC_ Queue de cheval 2
+  - first:
+      1: 100060
+    second: ORC_ R Calf
+  - first:
+      1: 100062
+    second: ORC_ R Clavicle
+  - first:
+      1: 100064
+    second: ORC_ R Finger0
+  - first:
+      1: 100066
+    second: ORC_ R Finger01
+  - first:
+      1: 100068
+    second: ORC_ R Finger02
+  - first:
+      1: 100070
+    second: ORC_ R Finger1
+  - first:
+      1: 100072
+    second: ORC_ R Finger11
+  - first:
+      1: 100074
+    second: ORC_ R Finger12
+  - first:
+      1: 100076
+    second: ORC_ R Finger2
+  - first:
+      1: 100078
+    second: ORC_ R Finger21
+  - first:
+      1: 100080
+    second: ORC_ R Finger22
+  - first:
+      1: 100082
+    second: ORC_ R Finger3
+  - first:
+      1: 100084
+    second: ORC_ R Finger31
+  - first:
+      1: 100086
+    second: ORC_ R Finger32
+  - first:
+      1: 100088
+    second: ORC_ R Foot
+  - first:
+      1: 100090
+    second: ORC_ R Forearm
+  - first:
+      1: 100092
+    second: ORC_ R Hand
+  - first:
+      1: 100094
+    second: ORC_ R Thigh
+  - first:
+      1: 100096
+    second: ORC_ R Toe0
+  - first:
+      1: 100098
+    second: ORC_ R UpperArm
+  - first:
+      1: 100100
+    second: ORC_ Spine
+  - first:
+      1: 100102
+    second: ORC_ Spine1
+  - first:
+      1: 100104
+    second: PELT_SKIN_BACK_1
+  - first:
+      1: 100106
+    second: PELT_SKIN_BACK_2
+  - first:
+      1: 100108
+    second: PELT_SKIN_BACK_3
+  - first:
+      1: 100110
+    second: PELT_SKIN_FRONT_1
+  - first:
+      1: 100112
+    second: PELT_SKIN_FRONT_2
+  - first:
+      1: 100114
+    second: PELT_SKIN_FRONT_3
+  - first:
+      1: 100116
+    second: SHOULDER_PAD_L
+  - first:
+      1: 100118
+    second: SHOULDER_PAD_R
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: ORC_
+  - first:
+      4: 400004
+    second: ORC_ Head
+  - first:
+      4: 400006
+    second: ORC_ L Calf
+  - first:
+      4: 400008
+    second: ORC_ L Clavicle
+  - first:
+      4: 400010
+    second: ORC_ L Finger0
+  - first:
+      4: 400012
+    second: ORC_ L Finger01
+  - first:
+      4: 400014
+    second: ORC_ L Finger02
+  - first:
+      4: 400016
+    second: ORC_ L Finger1
+  - first:
+      4: 400018
+    second: ORC_ L Finger11
+  - first:
+      4: 400020
+    second: ORC_ L Finger12
+  - first:
+      4: 400022
+    second: ORC_ L Finger2
+  - first:
+      4: 400024
+    second: ORC_ L Finger21
+  - first:
+      4: 400026
+    second: ORC_ L Finger22
+  - first:
+      4: 400028
+    second: ORC_ L Finger3
+  - first:
+      4: 400030
+    second: ORC_ L Finger31
+  - first:
+      4: 400032
+    second: ORC_ L Finger32
+  - first:
+      4: 400034
+    second: ORC_ L Foot
+  - first:
+      4: 400036
+    second: ORC_ L Forearm
+  - first:
+      4: 400038
+    second: ORC_ L Hand
+  - first:
+      4: 400040
+    second: ORC_ L Thigh
+  - first:
+      4: 400042
+    second: ORC_ L Toe0
+  - first:
+      4: 400044
+    second: ORC_ L UpperArm
+  - first:
+      4: 400046
+    second: ORC_ Neck
+  - first:
+      4: 400048
+    second: ORC_ Pelvis
+  - first:
+      4: 400050
+    second: ORC_ Queue de cheval 1
+  - first:
+      4: 400052
+    second: ORC_ Queue de cheval 11
+  - first:
+      4: 400054
+    second: ORC_ Queue de cheval 12
+  - first:
+      4: 400056
+    second: ORC_ Queue de cheval 13
+  - first:
+      4: 400058
+    second: ORC_ Queue de cheval 2
+  - first:
+      4: 400060
+    second: ORC_ R Calf
+  - first:
+      4: 400062
+    second: ORC_ R Clavicle
+  - first:
+      4: 400064
+    second: ORC_ R Finger0
+  - first:
+      4: 400066
+    second: ORC_ R Finger01
+  - first:
+      4: 400068
+    second: ORC_ R Finger02
+  - first:
+      4: 400070
+    second: ORC_ R Finger1
+  - first:
+      4: 400072
+    second: ORC_ R Finger11
+  - first:
+      4: 400074
+    second: ORC_ R Finger12
+  - first:
+      4: 400076
+    second: ORC_ R Finger2
+  - first:
+      4: 400078
+    second: ORC_ R Finger21
+  - first:
+      4: 400080
+    second: ORC_ R Finger22
+  - first:
+      4: 400082
+    second: ORC_ R Finger3
+  - first:
+      4: 400084
+    second: ORC_ R Finger31
+  - first:
+      4: 400086
+    second: ORC_ R Finger32
+  - first:
+      4: 400088
+    second: ORC_ R Foot
+  - first:
+      4: 400090
+    second: ORC_ R Forearm
+  - first:
+      4: 400092
+    second: ORC_ R Hand
+  - first:
+      4: 400094
+    second: ORC_ R Thigh
+  - first:
+      4: 400096
+    second: ORC_ R Toe0
+  - first:
+      4: 400098
+    second: ORC_ R UpperArm
+  - first:
+      4: 400100
+    second: ORC_ Spine
+  - first:
+      4: 400102
+    second: ORC_ Spine1
+  - first:
+      4: 400104
+    second: PELT_SKIN_BACK_1
+  - first:
+      4: 400106
+    second: PELT_SKIN_BACK_2
+  - first:
+      4: 400108
+    second: PELT_SKIN_BACK_3
+  - first:
+      4: 400110
+    second: PELT_SKIN_FRONT_1
+  - first:
+      4: 400112
+    second: PELT_SKIN_FRONT_2
+  - first:
+      4: 400114
+    second: PELT_SKIN_FRONT_3
+  - first:
+      4: 400116
+    second: SHOULDER_PAD_L
+  - first:
+      4: 400118
+    second: SHOULDER_PAD_R
+  - first:
+      74: 7400000
+    second: attack3Forward_RM
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -144,16 +390,20 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: attack3Forward_RM
       takeName: Take 001
+      internalID: 7400000
       firstFrame: 0
       lastFrame: 25
       wrapMode: 0
@@ -163,7 +413,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -349,13 +599,22 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -365,10 +624,15 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -378,8 +642,8 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: ORC_
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 0
