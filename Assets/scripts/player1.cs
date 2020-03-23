@@ -3,19 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class player1 : MonoBehaviour {
+	public static player1 Instance;
+	[Header("variables vida")]
+	public float vidaPj1 = 100f;
 
+	[Header("variables mov")]
 	public float moveSpeed = 5.0f; // velocidad
 	public float moveSpeedRet = 3.0f; // velocidad retrocediendo
 	public float jumpSpeed = 8.0f; // salto, cambia esta variable para saltar mas alto
 	public float gravity = 20.0f; // salto, cambia esta variable para saltar mas alto
 	public float rotationSpeed = 200.0f; //Rotacion camera sensibilidad
-
-	private Animator anim;
+	public Animator anim;
 	public float x,y;
 
-	
+	[Header("Daños")]
+	public float dañoBasico1 = 2.5f;
+	public float dañoEspecial = 10f;
+	//public bool atacando;
+	public bool ataquedisp;
+	private float daño;
+	void Awake()
+	{
+		//ALMACENA INSTANCIA
+		//Cualquier script puede usar este gamemanager usando player1.Instance
+		if (Instance != null)
+			Destroy(Instance);
+		Instance = this;
+
+	}
 	private void Start() {
+		
 		anim = GetComponent<Animator>();
+		//atacando = true;
+		ataquedisp = false;
 	}
 	void Update () {
 		bool escudo = Input.GetKey(KeyCode.E);
@@ -39,6 +59,7 @@ public class player1 : MonoBehaviour {
 			}
 			
 		}
+		
 
 		x = Input.GetAxis("Horizontal");
 		y = Input.GetAxis("Vertical");
@@ -49,19 +70,23 @@ public class player1 : MonoBehaviour {
 	//-----------------------------------------------------------------------------
 
 	// ------------------------------  Ataque  ---------------------------------------
-		bool atacar = Input.GetKeyDown(KeyCode.F);
+		bool ataqueBasico = Input.GetKeyDown(KeyCode.F);
 		bool ataqueEspecial = Input.GetKeyDown(KeyCode.R);
-		if (atacar)
-		{	
-			
-			ataque();
+
+		if (ataqueBasico)
+		{
+			ataquedisp = true;
 			anim.ResetTrigger("Atacar");
 			anim.SetTrigger("Atacar");
+			daño = dañoBasico1;
+		
 		}
 		if(ataqueEspecial){
-			// generar funcion atEspecial()
+			ataquedisp = true;
 			anim.ResetTrigger("AtaqueEsp");
 			anim.SetTrigger("AtaqueEsp");
+			daño = dañoEspecial;
+		
 		}
 	//--------------------------------------------------------------------------------
 
@@ -75,11 +100,31 @@ public class player1 : MonoBehaviour {
 		}
 
 
-	//----------------------------------------------------------------------------
-	
-	}
+		//----------------------------------------------------------------------------
+		//------------------------ comprobando vida --------------------------
 
-	void ataque(){
-		// codigo necesario para hacer daño etc.
+		if (vidaPj1 <= 0)
+		{
+			anim.ResetTrigger("muerto");
+			anim.SetTrigger("muerto");
+		}
+		//-------------------------------------------------------------------
 	}
+	public void getHit(float daño)
+	{
+		vidaPj1 -= daño;
+		anim.ResetTrigger("hit");
+		anim.SetTrigger("hit");
+	}
+	public void  ataque()
+	{
+
+		//atacando = true;
+		player2.Instance.getHit(daño);
+		//StartCoroutine(Esperando(0.3f)); // esto es lo que dura la animacion de atacar
+	}
+	
+
+
+
 }

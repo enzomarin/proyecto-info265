@@ -551,13 +551,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8905e5fdbadcfec45a1fd4878f2ea42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaPj1: 100
   moveSpeed: 5
   moveSpeedRet: 3
   jumpSpeed: 8
   gravity: 20
   rotationSpeed: 200
+  anim: {fileID: 0}
   x: 0
   y: 0
+  atacar: 0
+  atacando: 0
 --- !u!1 &113548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,6 +2451,7 @@ GameObject:
   - component: {fileID: 465986}
   - component: {fileID: 3339554}
   - component: {fileID: 2319904}
+  - component: {fileID: 8451877417080363876}
   m_Layer: 0
   m_Name: sword
   m_TagString: Untagged
@@ -2513,6 +2518,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8451877417080363876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.071942404, y: 0.016863113, z: 0.86354756}
+  m_Center: {x: -0.001448275, y: -0.00009453082, z: 0.5890638}
 --- !u!1 &195948
 GameObject:
   m_ObjectHideFlags: 0

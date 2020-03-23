@@ -230,12 +230,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35da0558f1bd94b46b69c451be27e04e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidapj2: 150
   moveSpeed: 3
+  moveSpeedRet: 1.5
   jumpSpeed: 8
   gravity: 20
   rotationSpeed: 200
   x: 0
   y: 0
+  anim: {fileID: 0}
+  "da\xF1oBasico1": 2.5
+  "da\xF1oEspecial": 10
+  atacando: 0
+  ataquedisp: 0
 --- !u!54 &2645837877184769151
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -262,10 +269,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.41855174
+  m_Radius: 0.30588582
   m_Height: 2.381295
   m_Direction: 1
-  m_Center: {x: 0, y: 1.2135361, z: 0.02143377}
+  m_Center: {x: 0, y: 1.2135361, z: 0.028497428}
 --- !u!1 &110632
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131058}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.459, y: 0, z: 0.805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400734}
@@ -1290,6 +1297,7 @@ GameObject:
   - component: {fileID: 475024}
   - component: {fileID: 3330012}
   - component: {fileID: 2364498}
+  - component: {fileID: 6328769048218882850}
   m_Layer: 0
   m_Name: axe001
   m_TagString: Untagged
@@ -1356,6 +1364,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6328769048218882850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.63490987, y: 0.043540392, z: 0.6493228}
+  m_Center: {x: 0.25567997, y: -0.0064101075, z: 0.83538324}
 --- !u!1 &147554
 GameObject:
   m_ObjectHideFlags: 0

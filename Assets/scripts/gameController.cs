@@ -9,6 +9,9 @@ public class gameController : MonoBehaviour
     public static gameController Instance;
     public Canvas hud;
     public Canvas canvPause;
+
+    public Text textV1;
+    public Text textV2;
     void Awake()
     {
 
@@ -20,15 +23,13 @@ public class gameController : MonoBehaviour
 
     }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
     {
+       textV1.text = "Vida pj1: "+ player1.Instance.vidaPj1;
+       textV2.text = "Vida pj2: " + player2.Instance.vidapj2;
  
     }
 }
