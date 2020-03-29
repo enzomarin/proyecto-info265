@@ -66,7 +66,6 @@ public class player2 : MonoBehaviour {
 			transform.Rotate(0, x*Time.deltaTime * rotationSpeed,0);
 		}
 
-		
 
 	//-----------------------------------------------------------------------------
 
@@ -92,7 +91,6 @@ public class player2 : MonoBehaviour {
 		//--------------------------------------------------------------------------------
 
 
-
 		// protegerse
 
 		anim.SetBool("escudoIde",escudo);
@@ -100,18 +98,15 @@ public class player2 : MonoBehaviour {
 			moveSpeed = 2f;
 		}
 
-
 	//----------------------------------------------------------------------------
 
 	//------------------------ comprobando vida --------------------------
-
 	if (vidapj2 <= 0)
 	{
 			anim.ResetTrigger("muerto");
 			anim.SetTrigger("muerto");
 	}
 	//-------------------------------------------------------------------
-	
 	}
 	public void getHit(float daño)
 	{

@@ -10,8 +10,6 @@ public class player1 : MonoBehaviour {
 	[Header("variables mov")]
 	public float moveSpeed = 5.0f; // velocidad
 	public float moveSpeedRet = 3.0f; // velocidad retrocediendo
-	public float jumpSpeed = 8.0f; // salto, cambia esta variable para saltar mas alto
-	public float gravity = 20.0f; // salto, cambia esta variable para saltar mas alto
 	public float rotationSpeed = 200.0f; //Rotacion camera sensibilidad
 	public Animator anim;
 	public float x,y;
@@ -38,77 +36,80 @@ public class player1 : MonoBehaviour {
 		ataquedisp = false;
 	}
 	void Update () {
-		bool escudo = Input.GetKey(KeyCode.E);
-	// movimiento del personaje
-		bool correr = Input.GetKey(KeyCode.W);
-		bool retroceder = Input.GetKey(KeyCode.S);
-		bool girDer = Input.GetKey(KeyCode.D);
-		bool girIzq = Input.GetKey(KeyCode.A);
+		if (anim.enabled && vidaPj1>0)
+		{
+			bool escudo = Input.GetKey(KeyCode.E);
+			// movimiento del personaje
+			bool correr = Input.GetKey(KeyCode.W);
+			bool retroceder = Input.GetKey(KeyCode.S);
+			bool girDer = Input.GetKey(KeyCode.D);
+			bool girIzq = Input.GetKey(KeyCode.A);
 
-		anim.SetBool("ret",retroceder);
-		anim.SetBool("run",correr);
-		anim.SetBool("girarDer",girDer);
-		anim.SetBool("girarIzq",girIzq);
-		if(retroceder){
-			moveSpeed = moveSpeedRet;
+			anim.SetBool("ret", retroceder);
+			anim.SetBool("run", correr);
+			anim.SetBool("girarDer", girDer);
+			anim.SetBool("girarIzq", girIzq);
+			if (retroceder)
+			{
+				moveSpeed = moveSpeedRet;
+			}
+			else
+			{
+				if (!escudo)
+				{
+					moveSpeed = 5.0f;
+				}
+
+			}
+
+
+			x = Input.GetAxis("Horizontal");
+			y = Input.GetAxis("Vertical");
+			transform.Translate(0, 0, y * Time.deltaTime * moveSpeed);
+			transform.Rotate(0, x * Time.deltaTime * rotationSpeed, 0);
+
+
+			//-----------------------------------------------------------------------------
+
+			// ------------------------------  Ataque  ---------------------------------------
+			bool ataqueBasico = Input.GetKeyDown(KeyCode.F);
+			bool ataqueEspecial = Input.GetKeyDown(KeyCode.R);
+
+			if (ataqueBasico)
+			{
+				ataquedisp = true;
+				anim.ResetTrigger("Atacar");
+				anim.SetTrigger("Atacar");
+				daño = dañoBasico1;
+
+			}
+			if (ataqueEspecial)
+			{
+				ataquedisp = true;
+				anim.ResetTrigger("AtaqueEsp");
+				anim.SetTrigger("AtaqueEsp");
+				daño = dañoEspecial;
+
+			}
+			//--------------------------------------------------------------------------------
+
+
+
+			// protegerse
+
+			anim.SetBool("escudoIde", escudo);
+			if (escudo && !correr)
+			{
+				moveSpeed = 2f;
+			}
+
 		}
 		else
 		{
-			if(!escudo){
-				moveSpeed = 5.0f;
-			}
-			
+			//anim.ResetTrigger("muerto");
+			//anim.SetTrigger("muerto");
+			Debug.Log("muerto");
 		}
-		
-
-		x = Input.GetAxis("Horizontal");
-		y = Input.GetAxis("Vertical");
-		transform.Translate(0,0, y* Time.deltaTime * moveSpeed);
-		transform.Rotate(0, x*Time.deltaTime * rotationSpeed,0);
-		
-
-	//-----------------------------------------------------------------------------
-
-	// ------------------------------  Ataque  ---------------------------------------
-		bool ataqueBasico = Input.GetKeyDown(KeyCode.F);
-		bool ataqueEspecial = Input.GetKeyDown(KeyCode.R);
-
-		if (ataqueBasico)
-		{
-			ataquedisp = true;
-			anim.ResetTrigger("Atacar");
-			anim.SetTrigger("Atacar");
-			daño = dañoBasico1;
-		
-		}
-		if(ataqueEspecial){
-			ataquedisp = true;
-			anim.ResetTrigger("AtaqueEsp");
-			anim.SetTrigger("AtaqueEsp");
-			daño = dañoEspecial;
-		
-		}
-	//--------------------------------------------------------------------------------
-
-
-
-	// protegerse
-		
-		anim.SetBool("escudoIde",escudo);
-		if(escudo && !correr){
-			moveSpeed = 2f;
-		}
-
-
-		//----------------------------------------------------------------------------
-		//------------------------ comprobando vida --------------------------
-
-		if (vidaPj1 <= 0)
-		{
-			anim.ResetTrigger("muerto");
-			anim.SetTrigger("muerto");
-		}
-		//-------------------------------------------------------------------
 	}
 	public void getHit(float daño)
 	{

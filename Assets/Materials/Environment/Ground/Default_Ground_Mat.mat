@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Default_Ground_Mat
   m_Shader: {fileID: 4800000, guid: f7f335b659c92cf468c6f87e8581c34a, type: 3}
   m_ShaderKeywords: 
@@ -159,7 +160,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 0.878
     - _Parallax: 0.02
-    - _ParallaxStrength: 0
+    - _ParallaxStrength: 0.0462
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -172,7 +173,7 @@ Material:
     - _TopMetallic: 0
     - _UVOffset: 5
     - _UVSec: 0
-    - _WaterEdge: 0.395
+    - _WaterEdge: 0.38
     - _ZWrite: 1
     - _offset: 0.5
     - _waterLevel: 0.679
